@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boutique Chic - Vêtements en ligne</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Boutique <span>Chic</span></h1>
+      <nav class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#products">Produits</a>
+        <a href="#about">À propos</a>
+        <button id="cartBtn" class="cart-btn">Panier (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Collection printemps - été</h2>
+          <p>Des pièces élégantes, durables et confortables — pour tous les jours.</p>
+          <a class="btn" href="#products">Découvrir</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="placeholder">Image</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h3>Nos produits</h3>
+      <div id="productsGrid" class="grid">
+        <!-- Les produits seront insérés par JS -->
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3>À propos</h3>
+      <p>Petite boutique familiale spécialisée dans les vêtements modernes et responsables. Paiement sécurisé, retours faciles.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Boutique Chic — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Cart modal -->
+  <div id="cartModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="closeCart">&times;</button>
+      <h4>Votre panier</h4>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <strong>Total: <span id="cartTotal">0.00</span> €</strong>
+        <button id="checkoutBtn" class="btn">Commander</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
